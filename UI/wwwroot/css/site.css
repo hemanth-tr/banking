@@ -20,3 +20,14 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.navbar {
+    height: 150px !important;
+    align-items: end !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+}
+
+.menu:not(:first-child) {
+    margin-left: 10px !important;
+}

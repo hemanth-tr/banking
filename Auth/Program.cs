@@ -1,5 +1,5 @@
 using Auth0.AspNetCore.Authentication;
-using Microsoft.IdentityModel.Protocols.OpenIdConnect;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Auth;
 
@@ -11,17 +11,16 @@ public class Program
 
         // Add services to the container.
         builder.Services.AddControllersWithViews();
-        builder.Services.ConfigureSameSiteNoneCookies();
+
         builder.Services.AddAuth0WebAppAuthentication(options =>
         {
             options.Domain = builder.Configuration["Auth0:Domain"];
             options.ClientId = builder.Configuration["Auth0:ClientId"];
-            options.ClientSecret = builder.Configuration["Auth0:ClientSecret"];
-
-            options.ResponseType = OpenIdConnectResponseType.Code;
-            options.Scope = "openid";
         });
 
+        builder.Services.AddSingleton<IAuthorizationMiddlewareResultHandler, Middlewares.AuthorizationMiddleware>();
+
+        builder.Services.ConfigureSameSiteNoneCookies();
         var app = builder.Build();
 
         // Configure the HTTP request pipeline.
@@ -34,7 +33,7 @@ public class Program
 
         app.UseHttpsRedirection();
         app.UseStaticFiles();
-
+        app.UseCookiePolicy();
         app.UseRouting();
 
         app.UseAuthentication();

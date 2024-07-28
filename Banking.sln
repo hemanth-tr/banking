@@ -3,14 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI", "UI\UI.csproj", "{666F8B17-1AA5-472F-86E8-0DFEA231880B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UI", "UI\UI.csproj", "{666F8B17-1AA5-472F-86E8-0DFEA231880B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auth", "Auth\Auth.csproj", "{368C09CF-494E-4E55-B7CA-8DA5D0ABB744}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Auth", "Auth\Auth.csproj", "{368C09CF-494E-4E55-B7CA-8DA5D0ABB744}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Theme", "Theme\Theme.csproj", "{FE4E042F-441F-4A7F-8606-899A322C8507}"
 EndProject
 Global
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|x64 = Debug|x64
@@ -44,5 +43,23 @@ Global
 		{368C09CF-494E-4E55-B7CA-8DA5D0ABB744}.Release|x64.Build.0 = Release|Any CPU
 		{368C09CF-494E-4E55-B7CA-8DA5D0ABB744}.Release|x86.ActiveCfg = Release|Any CPU
 		{368C09CF-494E-4E55-B7CA-8DA5D0ABB744}.Release|x86.Build.0 = Release|Any CPU
+		{FE4E042F-441F-4A7F-8606-899A322C8507}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE4E042F-441F-4A7F-8606-899A322C8507}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE4E042F-441F-4A7F-8606-899A322C8507}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{FE4E042F-441F-4A7F-8606-899A322C8507}.Debug|x64.Build.0 = Debug|Any CPU
+		{FE4E042F-441F-4A7F-8606-899A322C8507}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{FE4E042F-441F-4A7F-8606-899A322C8507}.Debug|x86.Build.0 = Debug|Any CPU
+		{FE4E042F-441F-4A7F-8606-899A322C8507}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE4E042F-441F-4A7F-8606-899A322C8507}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE4E042F-441F-4A7F-8606-899A322C8507}.Release|x64.ActiveCfg = Release|Any CPU
+		{FE4E042F-441F-4A7F-8606-899A322C8507}.Release|x64.Build.0 = Release|Any CPU
+		{FE4E042F-441F-4A7F-8606-899A322C8507}.Release|x86.ActiveCfg = Release|Any CPU
+		{FE4E042F-441F-4A7F-8606-899A322C8507}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {01366AC5-2E8A-40D5-82B0-D0D07EB1EA6F}
 	EndGlobalSection
 EndGlobal

@@ -1,6 +1,7 @@
 ﻿using Auth0.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace Auth.Controllers
 {
@@ -25,9 +26,9 @@ namespace Auth.Controllers
             await HttpContext.ChallengeAsync(Auth0Constants.AuthenticationScheme, authenticationProperties);
         }
 
-        public IActionResult Callback()
+        public async Task<IActionResult> Callback()
         {
-            return RedirectToAction("Index", "Accounts");
+            return Redirect("https://localhost:7298");
         }
     }
 }

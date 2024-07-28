@@ -12,14 +12,18 @@
     <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand fs-1" href="#"><b>B</b>anking</a>
-            @if (User.Identity.IsAuthenticated)
-            {
-                <a class="navbar-brand d-flex" href="/Signout">Logout</a>
-            }
-            else
-            {
-                <a class="navbar-brand d-flex" href="/Signin">Login</a>
-            }
+            <ul class="navbar-nav d-flex">
+                <li class="nav-item">
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <a class="nav-link" href="/Signout">Logout</a>
+                    }
+                    else
+                    {
+                        <a class="nav-link" href="/Signin">Login</a>
+                    }
+                </li>
+            </ul>
         </div>
     </nav>
     <div class="container">

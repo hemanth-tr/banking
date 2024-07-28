@@ -22,7 +22,6 @@ body {
 }
 
 .navbar {
-    height: 150px !important;
     align-items: end !important;
     flex-direction: column !important;
     justify-content: space-between !important;
@@ -30,4 +29,9 @@ body {
 
 .menu:not(:first-child) {
     margin-left: 10px !important;
+}
+
+.navbar-brand {
+    padding: 8px;
+    font-size: 45px !important;
 }
